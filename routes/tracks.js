@@ -8,7 +8,7 @@ const { getItem, getItems, createItem, updateItem, deleteItem } = require("../co
 
 router.get("/", authMiddleware, getItems);
 router.get("/:id", authMiddleware, validatorGetItem, getItem);
-router.post("/", authMiddleware, checkRol(["admin"]) ,validatorCreateItem, createItem);
+router.post("/", authMiddleware, checkRol(["user","admin"]) ,validatorCreateItem, createItem);
 router.put("/:id", authMiddleware, validatorGetItem, validatorCreateItem, updateItem);
 router.delete("/:id", authMiddleware, validatorGetItem, deleteItem);
 

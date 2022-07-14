@@ -34,8 +34,7 @@ const validatorCreateItem = [
     .notEmpty(),
     check("mediaId")
     .exists()
-    .notEmpty()
-    .isMongoId(),
+    .notEmpty(),
     (req, res, next) => {
         return validateResults(req, res, next)
     }
@@ -44,8 +43,7 @@ const validatorCreateItem = [
 const validatorGetItem = [
     check("id")
     .exists()
-    .notEmpty()
-    .isMongoId(),
+    .notEmpty(),
     (req, res, next) => {
         return validateResults(req, res, next)
     }

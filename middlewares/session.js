@@ -1,7 +1,7 @@
 const {handleHttpError} = require("../utils/handleError")
 const {verifytoken} = require("../utils/handleJwt")
 const {usersModels} = require ("../models")
-const getProperties = require("./handlePropertiesEngine")
+const getProperties = require("../utils/handlePropertiesEngine")
 const propertiesKey = getProperties()
 
 const authMiddleware = async (req, res, next) =>{
